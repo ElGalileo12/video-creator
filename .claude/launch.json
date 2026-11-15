@@ -1,0 +1,36 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "estudio",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "estudio"
+      ],
+      "port": 4321
+    },
+    {
+      "name": "remotion",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "exec",
+        "remotion",
+        "studio",
+        "--port",
+        "3123",
+        "--no-open"
+      ],
+      "port": 3123
+    },
+    {
+      "name": "estudio-prueba",
+      "runtimeExecutable": "env",
+      "runtimeArgs": [
+        "PORT=4322",
+        "pnpm",
+        "estudio"
+      ],
+      "port": 4322
+    }
+  ]
+}

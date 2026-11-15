@@ -1,0 +1,16 @@
+node_modules/
+.env
+.revision/
+.cache/
+listos/
+
+# Contenido de los videos (no se sube, solo el programa)
+proyectos/
+pedidos/
+public/
+listos/
+muestras-de-voz/
+catalogo-voces.html
+voces-bitbang.html
+marca.json
+categorias.json

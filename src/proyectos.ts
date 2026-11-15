@@ -1,0 +1,57 @@
+// Lista de videos. Cada proyecto nuevo se añade aquí.
+import { alcantarillas } from '../proyectos/alcantarillas';
+import { bitbang01Tales } from '../proyectos/bitbang-01-tales';
+import { bitbang02Anaximandro } from '../proyectos/bitbang-02-anaximandro';
+import { bitbang03Mapa } from '../proyectos/bitbang-03-mapa';
+import { bitbang04Peces } from '../proyectos/bitbang-04-peces';
+import { bitbang06Rio } from '../proyectos/bitbang-06-rio';
+import { bitbang07Atomos } from '../proyectos/bitbang-07-atomos';
+import { bitbang08Arquimedes } from '../proyectos/bitbang-08-arquimedes';
+import { bitbang05Aire } from '../proyectos/bitbang-05-aire';
+import { bitbangEspecialFermi } from '../proyectos/bitbang-especial-fermi';
+import { bitbangEspecialDrake } from '../proyectos/bitbang-especial-drake';
+import { bitbangEspecialMarte } from '../proyectos/bitbang-especial-marte';
+import { bitbangEspecialMundos } from '../proyectos/bitbang-especial-mundos';
+import { bitbangEspecialPapel } from '../proyectos/bitbang-especial-papel';
+import { bitbangEspecialBosque } from '../proyectos/bitbang-especial-bosque';
+import { bitbangEspecialFrio } from '../proyectos/bitbang-especial-frio';
+import { bitbangEspecialCalor } from '../proyectos/bitbang-especial-calor';
+import { bitbangEspecialSupernova } from '../proyectos/bitbang-especial-supernova';
+import { bitbangEspecialParpadeo } from '../proyectos/bitbang-especial-parpadeo';
+import { bitbangEspecialPared } from '../proyectos/bitbang-especial-pared';
+import { bitbangEspecialVacio } from '../proyectos/bitbang-especial-vacio';
+import { bitbangEspecialParalisis } from '../proyectos/bitbang-especial-paralisis';
+import { bitbangSerie1 } from '../proyectos/bitbang-serie-1';
+import { bitbangEstamosSolos } from '../proyectos/bitbang-estamos-solos';
+import { cadaPartidoEnSuLugar } from '../proyectos/cada-partido-en-su-lugar';
+import { creaTuCuenta } from '../proyectos/crea-tu-cuenta';
+import { miEscuela } from '../proyectos/mi-escuela';
+import { pedirCupo } from '../proyectos/pedir-cupo';
+import { usuarios } from '../proyectos/usuarios';
+import { invitarYTorneos } from '../proyectos/invitar-y-torneos';
+import { organizadorTorneo } from '../proyectos/organizador-torneo';
+import { partidosAlineacion } from '../proyectos/partidos-alineacion';
+import { cuantosEquiposVienen } from '../proyectos/cuantos-equipos-vienen';
+import { entrenarEnSerio } from '../proyectos/entrenar-en-serio';
+import { galiUnEquipo } from '../proyectos/gali-un-equipo';
+import { ledsColores } from '../proyectos/leds-colores';
+import { muestra3d } from '../proyectos/muestra-3d';
+import { queTodosLoVean } from '../proyectos/que-todos-lo-vean';
+import { quienMeDebe } from '../proyectos/quien-me-debe';
+import { sabadoDePartidos } from '../proyectos/sabado-de-partidos';
+import { sabadoCasiSaleMal } from '../proyectos/sabado-casi-sale-mal';
+import { tiktokAdminDemo } from '../proyectos/tiktok-admin-demo';
+import { torneoWhatsapp } from '../proyectos/torneo-whatsapp';
+import { yQuienJuega } from '../proyectos/y-quien-juega';
+import { mercurioOrbita } from '../proyectos/mercurio-orbita';
+import { venusOrbita } from '../proyectos/venus-orbita';
+import { marteOrbita } from '../proyectos/marte-orbita';
+import type { Proyecto } from './tipos';
+
+export const proyectos: Proyecto[] = [alcantarillas, ledsColores, muestra3d, galiUnEquipo, yQuienJuega, entrenarEnSerio, sabadoCasiSaleMal, quienMeDebe, torneoWhatsapp, cuantosEquiposVienen, cadaPartidoEnSuLugar, sabadoDePartidos, queTodosLoVean, creaTuCuenta, miEscuela, pedirCupo, usuarios, invitarYTorneos, organizadorTorneo, partidosAlineacion, tiktokAdminDemo, bitbang01Tales, bitbang02Anaximandro, bitbang03Mapa, bitbang04Peces, bitbang05Aire, bitbang06Rio, bitbang07Atomos, bitbang08Arquimedes, bitbangEspecialFermi, bitbangEspecialDrake, bitbangEspecialMarte, bitbangEspecialMundos, bitbangEspecialPapel, bitbangEspecialBosque, bitbangEspecialFrio, bitbangEspecialCalor, bitbangEspecialVacio, bitbangEspecialParalisis, bitbangEspecialSupernova, bitbangEspecialParpadeo, bitbangEspecialPared, bitbangSerie1, bitbangEstamosSolos, mercurioOrbita, venusOrbita, marteOrbita];
+
+export const buscarProyecto = (id: string) => {
+  const proyecto = proyectos.find((p) => p.id === id);
+  if (!proyecto) throw new Error(`No existe el proyecto "${id}"`);
+  return proyecto;
+};
